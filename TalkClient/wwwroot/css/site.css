@@ -20,3 +20,54 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.message-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-content {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.message-text {
+    margin-bottom: 0;
+}
+
+.author-input {
+    flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.message-input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.send-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+

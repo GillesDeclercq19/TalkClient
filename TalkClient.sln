@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkClient", "TalkClient\TalkClient.csproj", "{C3EFAD39-33D9-4F75-BCE1-EB95CC102FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkClient.Cyb.UI.Mvc", "TalkClient\TalkClient.Cyb.UI.Mvc.csproj", "{C3EFAD39-33D9-4F75-BCE1-EB95CC102FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkClient.Model", "TalkClient.Model\TalkClient.Model.csproj", "{F99DCD78-8771-4295-B4F2-6E20CBB03CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkClient.Services", "TalkClient.Services\TalkClient.Services.csproj", "{28E83FAE-1C9F-4EE5-A58D-5A24F555DC10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C3EFAD39-33D9-4F75-BCE1-EB95CC102FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3EFAD39-33D9-4F75-BCE1-EB95CC102FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3EFAD39-33D9-4F75-BCE1-EB95CC102FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99DCD78-8771-4295-B4F2-6E20CBB03CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99DCD78-8771-4295-B4F2-6E20CBB03CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99DCD78-8771-4295-B4F2-6E20CBB03CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99DCD78-8771-4295-B4F2-6E20CBB03CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E83FAE-1C9F-4EE5-A58D-5A24F555DC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E83FAE-1C9F-4EE5-A58D-5A24F555DC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E83FAE-1C9F-4EE5-A58D-5A24F555DC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E83FAE-1C9F-4EE5-A58D-5A24F555DC10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

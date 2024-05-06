@@ -1,8 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model ChatViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <h3>Channels</h3>
+            <div class="row mb-3">
+                <div class="col-12 text-center">
+                    <form method="post" asp-action="CreateChannel">
+                        <input type="text" class="form-control mb-2" name="channelName" placeholder="Enter channel name">
+                        <button type="submit" class="btn btn-primary">Create New Channel</button>
+                    </form>
+                </div>
+            </div>
+            <ul class="list-group">
+                @foreach (var channel in Model.Channels)
+                {
+                    <li class="list-group-item">
+                        <a asp-action="GetMessages" asp-route-id="@channel.Id">@channel.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col-9">
+            <h3>Chat Of @Model.CurrentChannelName</h3>
+            <div class="chat-container">
+                <div class="message">
+                    @if (Model.Messages == null)
+                    {
+                        <p>No messages found</p>
+                    }
+                    else
+                    {
+                        @foreach (var message in Model.Messages)
+                        {
+                            <div class="message-item">
+                                <div class="avatar">
+                                    <img src="\Images\avatar.png" alt="Avatar">
+                                </div>
+                                <div class="message-content">
+                                    <p class="author">@message.Author</p>
+                                    <p class="timestamp">@message.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</p>
+                                    <p class="message-text">@message.Message</p>
+                                </div>
+                            </div>
+                        }
+                        <form method="post" asp-action="CreateMessage">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control author-input" name="author" placeholder="Your Name" aria-label="Your Name" aria-describedby="button-send">
+                                <input style="display:none" type="text" name="channel" value="@Model.CurrentChannelName" />
+                                <input style="width: 70%;" type="text" name="message" class="form-control message-input" placeholder="Type your message..." aria-label="Type your message..." aria-describedby="button-send">
+                                <button class="btn btn-outline-secondary send-button" type="submit" id="button-send">Send</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
